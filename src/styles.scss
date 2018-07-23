@@ -1,1 +1,53 @@
 /* You can add global styles to this file, and also import other style files */
+@media screen and (max-width: 320px) {
+    app-root {
+        .jumbotron-edit-home {
+            .title {
+                font-size: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 767px) {
+    app-root {
+        .col-md-vh-100 {
+            min-height: calc(100vh - 4.5rem);
+        }
+
+        .jumbotron-edit-home {
+            padding: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    app-root {
+        .col-sm-vh-25 {
+            min-height: calc(25vh - 4.5rem / 4);
+        }
+        .col-sm-vh-50 {
+            min-height: calc(50vh - 4.5rem / 2);
+        }
+        .col-sm-vh-75 {
+            min-height: calc(75vh - 4.5rem / 1.25);
+        }
+
+        .jumbotron-edit-home {
+            padding: 0px;
+            .title {
+            padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+app-root {
+    .o-hidden {
+        overflow: hidden;
+    }
+        
+    .col-vh-100 {
+        min-height: calc(100vh - 4.5rem);
+    }
+}
