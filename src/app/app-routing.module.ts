@@ -7,10 +7,10 @@ import { RegisterComponent } from './public/routing/register/register.component'
 
 const routes: Routes = [
   {
-    path: '', component: PublicComponent, children: [
-      { path: '', component: HomeComponent },
-      { path: 'register', component: RegisterComponent },
-      {path: '**', component: Code404Component}
+    path: '', component: PublicComponent, data: { title: 'FireSocial' }, children: [
+      { path: '', component: HomeComponent, data: { title: '' } },
+      { path: 'register', component: RegisterComponent, data: { title: 'Registrarse' } },
+      { path: '**', component: Code404Component }
     ]
   }
 ];
