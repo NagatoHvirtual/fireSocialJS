@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RegisterComponent } from './register.component';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { RegisterService } from './register.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    FormsModule
   ],
   declarations: [
     RegisterComponent

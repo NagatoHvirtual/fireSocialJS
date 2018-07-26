@@ -1,12 +1,12 @@
 <div class="col-md-12 bg-primary text-white col-vh-100">
   <div class="m-auto col-md-6">
     <h1 class="pt-4">Regístrate</h1>
-    <form>
+    <form (submit)="onRegisterEmail()">
       <div class="form-group">
-        <input type="email" class="form-control" aria-describedby="emailHelp" placeholder="Correo electronico">
+        <input type="email" name="email" [(ngModel)]="userData.email" class="form-control" ng aria-describedby="emailHelp" placeholder="Correo electronico">
       </div>
       <div class="form-group">
-        <input type="password" class="form-control" placeholder="Contraseña">
+        <input type="password" name="password" [(ngModel)]="userData.password" class="form-control" placeholder="Contraseña">
       </div>
       <button type="submit" class="btn btn-secondary">Guardar</button>
     </form>

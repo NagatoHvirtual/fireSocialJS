@@ -10,7 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
  */
 import { AppComponent } from './app.component';
 import { environment } from '../environments/environment';
-import { Code404Module } from './components/code404/code404.module';
+import { Code404Module } from './modules/code404/code404.module';
 
 @NgModule({
   declarations: [
