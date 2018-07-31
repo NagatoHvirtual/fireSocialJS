@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserData } from './user-data';
 import { RegisterService } from './register.service';
-import { ThrowStmt } from '../../../../../node_modules/@angular/compiler';
+import { Modals } from '../../../modules/modals/options/modals';
 
 @Component({
   selector: 'app-register',
@@ -13,7 +13,8 @@ export class RegisterComponent implements OnInit {
   userData: UserData = new UserData();
 
   constructor(
-    public registerService: RegisterService
+    public registerService: RegisterService,
+    public modal: Modals
   ) { }
 
   ngOnInit() {
@@ -24,7 +25,7 @@ export class RegisterComponent implements OnInit {
       .then(res => {
         console.log('Welcome', res);
       }).catch(err => {
-        console.log('Sorry', err);
+        this.modal.alert(err.message);
       });
   }
 
