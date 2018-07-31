@@ -6,6 +6,7 @@ import { HomeModule } from './modules/home/home.module';
 import { PublicRoutingModule } from './public-routing.module';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { Code404Module } from '../modules/code404/code404.module';
+import { ModalsModule } from '../modules/modals/modals.module';
 
 @NgModule({
   imports: [
@@ -13,13 +14,13 @@ import { Code404Module } from '../modules/code404/code404.module';
     PublicRoutingModule,
     RegisterModule,
     HomeModule,
-    Code404Module
+    Code404Module,
+    ModalsModule
   ],
   declarations: [
     PublicComponent,
     NavbarComponent
   ],
-  exports:[PublicComponent, PublicRoutingModule],
   bootstrap: [PublicComponent]
 })
 export class PublicModule { }
