@@ -7,7 +7,7 @@ import { Code404Component } from '../modules/code404/code404.component';
 
 const routes: Routes = [
   {
-    path: '', component: PublicComponent, children: [
+    path: '', component: PublicComponent, data: { title: '' }, children: [
       { path: '', component: HomeComponent, data: { title: '' }, },
       { path: 'register', component: RegisterComponent, data: { title: 'Registrarse' } },
       { path: '**', component: Code404Component }

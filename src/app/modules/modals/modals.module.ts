@@ -1,18 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AlertComponent } from './components/alert/alert.component';
 import { ModalContainerDirective } from './directives/modal-container.directive';
+import { AlertModalComponent } from './components/alert/alertModal.component';
 
 @NgModule({
   imports: [
     CommonModule
   ],
   declarations: [
-    AlertComponent,
+    AlertModalComponent,
     ModalContainerDirective
   ],
   entryComponents: [
-    AlertComponent
+    AlertModalComponent
   ],
   exports: [ModalContainerDirective]
 })

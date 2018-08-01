@@ -5,12 +5,18 @@ import { AngularFireModule } from 'angularfire2';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { environment } from '../environments/environment';
+
 /**
  * Componentes
  */
 import { AppComponent } from './app.component';
-import { environment } from '../environments/environment';
+
+/**
+ * Modulos
+ */
 import { Code404Module } from './modules/code404/code404.module';
+import { ModalsModule } from './modules/modals/modals.module';
 
 @NgModule({
   declarations: [
@@ -20,6 +26,7 @@ import { Code404Module } from './modules/code404/code404.module';
     BrowserModule,
     AppRoutingModule,
     Code404Module,
+    ModalsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig)
   ],
   providers: [],

@@ -1,5 +1,5 @@
-import { AlertComponent } from "../components/alert/alert.component";
 import { Injector, Injectable, ComponentFactoryResolver, ApplicationRef, EmbeddedViewRef, ComponentRef } from "@angular/core";
+import { AlertModalComponent } from "../components/alert/alertModal.component";
 
 
 @Injectable()
@@ -14,7 +14,7 @@ export class Modals {
     public alert = this._alert;
 
     private _alert(__message: string) {
-        let componentRef = this._process(AlertComponent);
+        let componentRef = this._process(AlertModalComponent);
         componentRef.instance.message = __message;
         componentRef.hostView.detectChanges();
         return componentRef;
@@ -38,6 +38,7 @@ export class Modals {
             .rootNodes[0] as HTMLElement;
 
         document.body.appendChild(domElem);
+        Object.assign(componentRef.instance, { destroy: () => { componentRef.hostView.destroy(); } });
         return componentRef;
     }
 }

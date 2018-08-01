@@ -1,0 +1,8 @@
+<div modalContainer modalClass="d-flex align-content-center">
+  <div class="col-8 col-md-6 col-lg-5 col-xl-4 m-auto align-self-center alert alert-danger" role="alert">
+    <h4 class="alert-heading" *ngIf="title">{{title}}</h4>
+    {{message}}
+    <hr>
+    <button (click)="onRemoveComponent()" class="btn btn-secondary btn-lg btn-block">Aceptar</button>
+  </div>
+</div>
