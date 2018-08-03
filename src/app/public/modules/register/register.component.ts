@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserData } from './user-data';
 import { RegisterService } from './register.service';
 import { Modals } from '../../../modules/modals/options/modals';
+import { UserData } from '../../models/user-data';
 
 @Component({
   selector: 'app-register',

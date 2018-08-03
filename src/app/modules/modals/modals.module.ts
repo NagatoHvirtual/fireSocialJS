@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ModalContainerDirective } from './directives/modal-container.directive';
 import { AlertModalComponent } from './components/alert/alertModal.component';
+import { Modals } from './options/modals';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { AlertModalComponent } from './components/alert/alertModal.component';
   entryComponents: [
     AlertModalComponent
   ],
-  exports: [ModalContainerDirective]
+  exports: [ModalContainerDirective],
+  providers: [Modals]
 })
 export class ModalsModule { }
