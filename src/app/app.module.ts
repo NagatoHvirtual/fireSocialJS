@@ -17,6 +17,7 @@ import { AppComponent } from './app.component';
  */
 import { Code404Module } from './modules/code404/code404.module';
 import { ModalsModule } from './modules/modals/modals.module';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 @NgModule({
   declarations: [
@@ -27,9 +28,9 @@ import { ModalsModule } from './modules/modals/modals.module';
     AppRoutingModule,
     Code404Module,
     ModalsModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig)
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

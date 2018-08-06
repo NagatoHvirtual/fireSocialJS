@@ -18,7 +18,6 @@ import { Code404Module } from '../modules/code404/code404.module';
   declarations: [
     PublicComponent,
     NavbarComponent
-  ],
-  bootstrap: [PublicComponent]
+  ]
 })
 export class PublicModule { }
